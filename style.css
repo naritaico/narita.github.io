@@ -1,5 +1,6 @@
 /*Text needs to be kerned*/
-html, body {
+html,
+body {
 	font-family: "EB Garamond", sans-serif;
 	font-kerning: normal;
 	border-style: none;
@@ -81,4 +82,5 @@ a:visited {
 
 a:hover {
 	text-decoration: none;
+	font-style: italic;
 }
