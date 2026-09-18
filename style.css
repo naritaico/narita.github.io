@@ -1,86 +1,73 @@
-/*Text needs to be kerned*/
 html,
 body {
-	font-family: "EB Garamond", sans-serif;
-	font-kerning: normal;
-	border-style: none;
+    display: flex;
+    flex-direction: column;
+      font-family: "EB Garamond", sans-serif;
+      font-kerning: normal;
+      border-style: none;
+      max-width: 750px;
+      margin: auto;
 }
 
 .container {
-	min-height: 85vh;
+      min-height: 95vh;
 }
 
 /* title and nav div */
 .header {
-	display: flex;
-	justify-content: flex-start;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 25px;
-	max-width: 750px;
-	border-style: none;
+      justify-content: flex-start;
+      border-bottom: 1px solid black;
+      padding-bottom: 10px;
 }
 
 .content {
-	border-top: 1px solid black;
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 750px;
-	padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
 .footer {
-	border-top: none;
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 750px;
-	margin-top: 55px;
-}
-
-.pageTitle {
-	width: 400px;
-	border-style: none;
+      border-top: none;
+      min-height: 4vh;
 }
 
 h1 {
-	font-weight: normal;
-	font-size: 12pt;
-	text-align: left;
-	margin-bottom: 30px;
-	margin-top: 0;
+      font-weight: normal;
+      font-size: 12pt;
+      text-align: left;
+      margin-bottom: 30px;
+      margin-top: 0;
 }
 h2 {
-	font-weight: normal;
-	font-size: 12pt;
-	text-align: left;
-	margin: 0;
+      font-weight: normal;
+      font-size: 12pt;
+      text-align: left;
+      margin: 0;
 }
 
 h3 {
-	font-weight: normal;
-	font-size: 12pt;
-	text-align: center;
-	margin: 0;
+      font-weight: normal;
+      font-size: 12pt;
+      text-align: center;
+      margin: 0;
 }
 
 p {
-	font-kerning: normal;
-	font-size: 12pt;
-	margin: 0;
-	margin-bottom: 20px;
+      font-size: 12pt;
+      margin: 0;
+      margin-bottom: 20px;
 }
 
 a:link {
-	color: black;
-	text-decoration: underline;
+      color: black;
+      text-decoration: underline;
 }
 
 a:visited {
-	color: black;
-	text-decoration: underline;
+      color: black;
+      text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: none;
-	font-style: italic;
+      text-decoration: none;
+      font-style: italic;
 }
