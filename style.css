@@ -1,73 +1,62 @@
-html,
-body {
-    display: flex;
-    flex-direction: column;
-      font-family: "EB Garamond", sans-serif;
-      font-kerning: normal;
-      border-style: none;
-      max-width: 750px;
-      margin: auto;
+html, body {
+     display: flex;
+     flex-direction: column;
+     font-family: "EB Garamond", sans-serif;
+     font-kerning: normal;
+     border-style: none;
+     max-width: 750px;
+     margin: auto;
 }
-
-.container {
-      min-height: 95vh;
+ .container {
+     min-height: 95vh;
 }
-
 /* title and nav div */
-.header {
-      justify-content: flex-start;
-      border-bottom: 1px solid black;
-      padding-bottom: 10px;
+ .header {
+     justify-content: flex-start;
+     border-bottom: 1px solid black;
+     padding-bottom: 10px;
 }
-
-.content {
-    padding-top: 10px;
-    padding-bottom: 50px;
+ .content {
+     padding-top: 10px;
+     padding-bottom: 50px;
 }
-
-.footer {
-      border-top: none;
-      min-height: 4vh;
+ .footer {
+     border-top: none;
+     min-height: 4vh;
 }
-
-h1 {
-      font-weight: normal;
-      font-size: 12pt;
-      text-align: left;
-      margin-bottom: 30px;
-      margin-top: 0;
+ h1 {
+     font-weight: normal;
+     font-size: 12pt;
+     text-align: left;
+     margin-bottom: 30px;
+     margin-top: 0;
 }
-h2 {
-      font-weight: normal;
-      font-size: 12pt;
-      text-align: left;
-      margin: 0;
+ h2 {
+     font-weight: normal;
+     font-size: 12pt;
+     text-align: left;
+     margin: 0;
 }
-
-h3 {
-      font-weight: normal;
-      font-size: 12pt;
-      text-align: center;
-      margin: 0;
+ h3 {
+     font-weight: normal;
+     font-size: 12pt;
+     text-align: center;
+     margin: 0;
 }
-
-p {
-      font-size: 12pt;
-      margin: 0;
-      margin-bottom: 20px;
+ p {
+     font-size: 12pt;
+     margin: 0;
+     margin-bottom: 20px;
 }
-
-a:link {
-      color: black;
-      text-decoration: underline;
+ a:link {
+     color: black;
+     text-decoration: underline;
 }
-
-a:visited {
-      color: black;
-      text-decoration: underline;
+ a:visited {
+     color: black;
+     text-decoration: underline;
 }
-
-a:hover {
-      text-decoration: none;
-      font-style: italic;
+ a:hover {
+     text-decoration: none;
+     font-style: italic;
 }
