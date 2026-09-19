@@ -1,63 +1,196 @@
+@font-face {
+	font-family: "Ronzino";
+	src: url("/fonts/Ronzino-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Ronzino";
+	src: url("/fonts/Ronzino-Oblique.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Ronzino";
+	src: url("/fonts/Ronzino-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Ronzino";
+	src: url("/fonts/Ronzino-MediumOblique.woff2") format("woff2");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Ronzino";
+	src: url("/fonts/Ronzino-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Ronzino";
+	src: url("/fonts/Ronzino-BoldOblique.woff2") format("woff2");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
 body {
-     display: flex;
-     flex-direction: column;
-     font-family: "EB Garamond", sans-serif;
-     font-kerning: normal;
-     border-style: none;
-     max-width: 750px;
-     margin: auto;
-     padding: 0 8px 0;
+	display: flex;
+	flex-direction: column;
+	font-family: "Ronzino", "Helvetica", "Arial", sans-serif;
+	font-size: 1rem;
+	line-height: 1.4;
+	font-kerning: normal;
+	border-style: none;
+	max-width: 1680px;
+	margin: auto;
+	padding-inline: 1rem;
+	min-height: 100vh;
+	hanging-punctuation: first last;
 }
- .container {
-     min-height: 95vh;
+
+header {
+	justify-content: flex-start;
+	padding: 10px 0 12px;
+	border-bottom: 1px solid black;
 }
-/* title and nav div */
- .header {
-     justify-content: flex-start;
-     padding: 10px 0 12px;
-     border-bottom: 1px solid black;
+main {
+	margin-bottom: auto;
+	padding-top: 10px;
 }
- .content {
-     padding-top: 10px;
-     padding-bottom: 50px;
+footer {
+	margin-top: 50px;
+	margin-bottom: 8px;
+	border-top: none;
 }
- .footer {
-     border-top: none;
-     min-height: 4vh;
+h1 {
+	font-weight: 700;
+	font-size: 1rem;
+	text-align: left;
+	margin-bottom: 30px;
+	margin-top: 0;
 }
- h1 {
-     font-weight: normal;
-     font-size: 12pt;
-     text-align: left;
-     margin-bottom: 30px;
-     margin-top: 0;
+h2 {
+	font-weight: 700;
+	font-size: 1rem;
+	text-align: left;
+	margin: 0;
+	margin-top: 0.2rem;
+	margin-bottom: 0.4rem;
 }
- h2 {
-     font-weight: normal;
-     font-size: 12pt;
-     text-align: left;
-     margin: 0;
+h3 {
+	font-weight: normal;
+	font-size: 1rem;
+	text-align: center;
+	margin: 0;
 }
- h3 {
-     font-weight: normal;
-     font-size: 12pt;
-     text-align: center;
-     margin: 0;
+nav {
+	font-weight: normal;
+	font-size: 1rem;
+	text-align: left;
+	margin: 0;
 }
- p {
-     font-size: 12pt;
-     margin: 0;
-     margin-bottom: 20px;
+p {
+	font-size: 1rem;
+	margin: 0;
+	margin-bottom: 20px;
+	max-width: 560px;
 }
- a:link {
-     color: black;
-     text-decoration: underline;
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
- a:visited {
-     color: black;
-     text-decoration: underline;
+
+nav a:link {
+	color: black;
+	text-decoration: none;
 }
- a:hover {
-     text-decoration: none;
-     font-style: italic;
+nav a:visited {
+	color: black;
+	text-decoration: none;
+}
+nav a:hover {
+	color: #3300ff;
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
+a:link {
+	color: black;
+	text-decoration: underline;
+}
+a:visited {
+	color: black;
+	text-decoration: underline;
+}
+a:hover {
+	color: #3300ff;
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
+.site-title {
+	display: block;
+	margin-bottom: 30px;
+}
+
+.site-title:link {
+	color: black;
+	text-decoration: none;
+	font-style: italic;
+}
+.site-title:visited {
+	color: black;
+	text-decoration: none;
+}
+.site-title:hover {
+	color: #3300ff;
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
+
+.cv {
+	max-width: 1120px;
+}
+
+.cv time {
+	font-variant-numeric: tabular-nums;
+}
+
+.cv ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.cv li {
+	display: grid;
+	margin-bottom: 1rem;
+}
+
+.cv--3col li {
+	grid-template-columns: 20% 40% 40%;
+}
+
+.cv--2col li {
+	grid-template-columns: 20% 80%;
+}
+
+.cv li > * {
+	padding-right: 16px;
+}
+
+.cv li p {
+	margin: 0;
+}
+
+.cv li:hover {
+	color: #f8485e;
 }
