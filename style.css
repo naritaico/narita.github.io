@@ -15,6 +15,7 @@ body {
  .header {
      justify-content: flex-start;
      padding: 10px 0 12px;
+     border-bottom: 1px solid black;
 }
  .content {
      padding-top: 10px;
