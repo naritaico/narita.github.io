@@ -202,9 +202,11 @@ a:hover {
 	margin: 0;
 }
 
-.cv li:hover {
-	border-top: 1px solid #443731;
-	border-bottom: 1px solid #443731;
+@media (hover: hover) {
+	.cv li:hover {
+		border-top: 1px solid #443731;
+		border-bottom: 1px solid #443731;
+	}
 }
 
 ::selection {
