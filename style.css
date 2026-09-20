@@ -124,6 +124,7 @@ a:hover {
 	text-decoration: none;
 	font-family:
 		"Pinyon Script", "Edwardian Script ITC", "Snell Roundhand", cursive;
+	font-weight: 700;
 	font-size: 1.5rem;
 	display: block;
 	width: fit-content;
