@@ -3,42 +3,42 @@
 	src: url("/fonts/Ronzino-Regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
-	font-display: swap;
+	font-display: optional;
 }
 @font-face {
 	font-family: "Ronzino";
 	src: url("/fonts/Ronzino-Oblique.woff2") format("woff2");
 	font-weight: 400;
 	font-style: italic;
-	font-display: swap;
+	font-display: optional;
 }
 @font-face {
 	font-family: "Ronzino";
 	src: url("/fonts/Ronzino-Medium.woff2") format("woff2");
 	font-weight: 500;
 	font-style: normal;
-	font-display: swap;
+	font-display: optional;
 }
 @font-face {
 	font-family: "Ronzino";
 	src: url("/fonts/Ronzino-MediumOblique.woff2") format("woff2");
 	font-weight: 500;
 	font-style: italic;
-	font-display: swap;
+	font-display: optional;
 }
 @font-face {
 	font-family: "Ronzino";
 	src: url("/fonts/Ronzino-Bold.woff2") format("woff2");
 	font-weight: 700;
 	font-style: normal;
-	font-display: swap;
+	font-display: optional;
 }
 @font-face {
 	font-family: "Ronzino";
 	src: url("/fonts/Ronzino-BoldOblique.woff2") format("woff2");
 	font-weight: 700;
 	font-style: italic;
-	font-display: swap;
+	font-display: optional;
 }
 
 body {
@@ -52,7 +52,7 @@ body {
 	max-width: 1680px;
 	margin: auto;
 	padding-inline: 1rem;
-	min-height: 100vh;
+	min-height: 103vh;
 	hanging-punctuation: first last;
 }
 
@@ -63,7 +63,7 @@ header {
 }
 main {
 	margin-bottom: auto;
-	padding-top: 10px;
+	margin-top: 12px;
 }
 footer {
 	margin-top: 50px;
@@ -136,12 +136,15 @@ a:hover {
 	text-decoration: underline;
 	text-decoration-style: wavy;
 }
+
 .site-title {
 	display: block;
+	width: fit-content;
 	margin-bottom: 30px;
 }
 
 .site-title:link {
+	font-weight: 700;
 	color: black;
 	text-decoration: none;
 	font-style: italic;
@@ -173,6 +176,7 @@ a:hover {
 .cv li {
 	display: grid;
 	margin-bottom: 1rem;
+	border: 1px solid transparent;
 }
 
 .cv--3col li {
@@ -192,5 +196,11 @@ a:hover {
 }
 
 .cv li:hover {
-	color: #f8485e;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+::selection {
+	background: #f8485e;
+	color: white;
 }
