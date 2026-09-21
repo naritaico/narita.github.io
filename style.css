@@ -41,6 +41,14 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "PP Playground";
+	src: url("/fonts/PPPlayground-Medium.otf") format("opentype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
 html {
 	scrollbar-gutter: stable;
 }
@@ -118,21 +126,23 @@ a:hover {
 }
 
 .site-title {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #ec5447;
+	color: #443731;
 	text-decoration: none;
 	font-family:
-		"Pinyon Script", "Edwardian Script ITC", "Snell Roundhand", cursive;
-	font-weight: 700;
-	font-size: 1.5rem;
+		"PP Playground", "Edwardian Script ITC", "Snell Roundhand", cursive;
+	font-size: 1.6rem;
 	display: block;
 	width: fit-content;
-	margin: 0 0 2rem;
+	margin: 0 0 2rem -0.3em;
+	font-feature-settings: "ss02" 1;
+}
+
+.site-title .swash {
+	font-feature-settings: "swsh" 1;
 }
 
 .site-title:hover {
-	color: #443731;
+	color: #ec5447;
 	text-decoration: none;
 }
 
