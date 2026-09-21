@@ -244,7 +244,7 @@ footer {
 
 @media screen and (max-width: 44em) {
 	body {
-		font-size: 1.2em;
+		font-size: 1.2rem;
 	}
 
 	.cv--3col li,
