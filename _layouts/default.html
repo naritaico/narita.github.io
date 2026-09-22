@@ -3,15 +3,26 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>{{ page.title }} &ndash; Narita Reyes Ico</title>
+		{% if page.home_page %}
+			<title>Narita Reyes Ico</title>
+		{% else %}
+			<title>{{ page.title }} &ndash; Narita Reyes Ico</title>
+		{% endif %}
 		<meta name="description" content="{{ page.description }}" />
 		<meta name="author" content="Narita Reyes Ico" />
 		<link rel="canonical" href="{{ page.url | absolute_url }}" />
 		<meta property="og:site_name" content="Narita Reyes Ico" />
-		<meta
-			property="og:title"
-			content="{{ page.title }} &ndash; Narita Reyes Ico"
-		/>
+		{% if page.home_page %}
+			<meta
+				property="og:title"
+				content="Narita Reyes Ico"
+			/>
+		{% else %}
+			<meta
+				property="og:title"
+				content="{{ page.title }} &ndash; Narita Reyes Ico"
+			/>
+		{% endif %}
 		<meta property="og:description" content="{{ page.description }}" />
 		<meta property="og:url" content="{{ page.url | absolute_url }}" />
 		<meta property="og:type" content="website" />
@@ -58,9 +69,13 @@
 
 	<body>
 		<header>
-			<a class="site-title" href="/"
-				><span class="swash">N</span>arita Reyes Ico</a
-			>
+			<a class="site-title" href="/">
+				{% if page.home_page %}
+					<h1><span class="swash">N</span>arita Reyes Ico</h1>
+				{% else %}
+					<span class="swash">N</span>arita Reyes Ico
+				{%- endif -%}
+			</a>
 			<nav>
 				<ul>
 					<li><a href="/archive">Archive</a></li>
@@ -69,13 +84,15 @@
 				</ul>
 			</nav>
 		</header>
-		<main>{{ content }}</main>
+		<main>
+			{{ content }}
+		</main>
 		<footer>
 			<p class="footer-text">
-				<span class="copyright" tabindex="0"
-					><span class="copyright-name">Narita Reyes Ico</span> ©
-					<span class="copyright-year">2026</span></span
-				>
+				<span class="copyright" tabindex="0">
+					<span class="copyright-name">Narita Reyes Ico</span> ©
+					<span class="copyright-year">2026</span>
+				</span>
 			</p>
 		</footer>
 	</body>
