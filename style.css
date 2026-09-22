@@ -259,6 +259,13 @@ footer {
 }
 
 @media screen and (max-width: 38em) {
+	header {
+		position: sticky;
+		top: 0;
+		background-color: white;
+		z-index: 1;
+	}
+
 	nav {
 		position: fixed;
 		bottom: 0;
