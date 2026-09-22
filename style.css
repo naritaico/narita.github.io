@@ -179,6 +179,23 @@ footer {
 	font-weight: 700;
 }
 
+.copyright {
+	cursor: pointer;
+}
+
+.copyright-name {
+	display: none;
+}
+
+.copyright:focus .copyright-name {
+	display: inline;
+}
+
+.copyright-year {
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.1em;
+}
+
 /* PAGE-SPECIFIC--------------------------------------------------- */
 .cv {
 	max-width: 79rem;
