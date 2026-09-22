@@ -71,7 +71,7 @@ body {
 	color: #443731;
 	line-height: 1.6;
 	font-kerning: normal;
-	max-width: 111rem;
+	max-width: 104rem;
 	margin: auto;
 	padding-inline: 1rem;
 	min-height: 100vh;
@@ -94,14 +94,13 @@ h2 {
 }
 
 p {
-	margin: 0 0 1rem;
-	max-width: 47rem;
+	margin: 0;
 }
 
 a {
 	color: #443731;
 	text-decoration: underline;
-	text-decoration-thickness: 0.08em;
+	text-decoration-thickness: 0.06em;
 	text-underline-offset: 0.1em;
 }
 
@@ -173,6 +172,11 @@ footer {
 	}
 }
 
+.body-text {
+	max-width: 44rem;
+	margin: 0 0 1rem;
+}
+
 .footer-text {
 	width: fit-content;
 	margin: 0 0 0 auto;
@@ -187,18 +191,13 @@ footer {
 	display: none;
 }
 
-.copyright:focus .copyright-name {
+.copyright:hover .copyright-name {
 	display: inline;
-}
-
-.copyright-year {
-	text-decoration-thickness: 0.08em;
-	text-underline-offset: 0.1em;
 }
 
 /* PAGE-SPECIFIC--------------------------------------------------- */
 .cv {
-	max-width: 79rem;
+	max-width: 74rem;
 
 	& time {
 		font-variant-numeric: tabular-nums;
@@ -221,19 +220,15 @@ footer {
 			padding-right: 1rem;
 			margin: 0;
 		}
-
-		& p {
-			margin: 0;
-		}
 	}
 }
 
 .cv--3col li {
-	grid-template-columns: minmax(12rem, 20%) 40% 40%;
+	grid-template-columns: minmax(10rem, 15%) 45% 40%;
 }
 
 .cv--2col li {
-	grid-template-columns: 20% 80%;
+	grid-template-columns: minmax(10rem, 15%) 85%;
 }
 
 /* RESPONSIVE------------------------------------------------------ */
