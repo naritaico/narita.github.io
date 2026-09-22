@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		{% if page.home_page %}
+			<title>Narita Reyes Ico</title>
+		{% else %}
+			<title>{{ page.title }} &ndash; Narita Reyes Ico</title>
+		{% endif %}
+		<meta name="description" content="{{ page.description }}" />
+		<meta name="author" content="Narita Reyes Ico" />
+		<link rel="canonical" href="{{ page.url | absolute_url }}" />
+		<meta property="og:site_name" content="Narita Reyes Ico" />
+		{% if page.home_page %}
+			<meta
+				property="og:title"
+				content="Narita Reyes Ico"
+			/>
+		{% else %}
+			<meta
+				property="og:title"
+				content="{{ page.title }} &ndash; Narita Reyes Ico"
+			/>
+		{% endif %}
+		<meta property="og:description" content="{{ page.description }}" />
+		<meta property="og:url" content="{{ page.url | absolute_url }}" />
+		<meta property="og:type" content="website" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="/favicon/favicon-96x96.png"
+			sizes="96x96"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicon/apple-touch-icon.png"
+		/>
+		<meta name="apple-mobile-web-app-title" content="Narita Reyes Ico" />
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+		<link
+			rel="preload"
+			href="/fonts/Ronzino-Bold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/PPPlayground-Medium.otf"
+			as="font"
+			type="font/otf"
+			crossorigin
+		/>
+		{% if page.extra_fonts %}
+			{% for font in page.extra_fonts %}
+				<link
+					rel="preload"
+					href="/fonts/{{ font }}.woff2"
+					as="font"
+					type="font/woff2"
+					crossorigin
+				/>
+			{% endfor %}
+		{% endif %}
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+	</head>
+
+	<body>
+		<header>
+			<a class="site-title" href="/">
+				{% if page.home_page %}
+					<h1><span class="swash">N</span>arita Reyes Ico</h1>
+				{% else %}
+					<span class="swash">N</span>arita Reyes Ico
+				{%- endif -%}
+			</a>
+			<nav>
+				<ul>
+					<li><a href="/archive">Archive</a></li>
+					<li><a href="/about">About</a> / <a href="/cv">CV</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			{{ content }}
+		</main>
+		<footer>
+			<p class="footer-text">
+				<span class="copyright" tabindex="0">
+					<span class="copyright-name">Narita Reyes Ico</span> ©
+					<span class="copyright-year">2026</span>
+				</span>
+			</p>
+		</footer>
+	</body>
+</html>
