@@ -30,8 +30,8 @@ content:
         label: "Date"
         type: date
         required: true
+        default: ""
         options:
-          default: ""
           format: "yyyy-MM"
 
       - name: location
