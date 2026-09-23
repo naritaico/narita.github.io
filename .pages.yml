@@ -14,29 +14,39 @@ content:
         required: true
         options:
           values:
-            [
-              { name: project-default, label: "Default project layout" },
-              { name: project-gallery, label: "Gallery layout" },
-              { name: project-text, label: "Text-only layout" },
-            ]
+            - name: project-default
+              label: "Default project layout"
+            - name: project-gallery
+              label: "Gallery layout"
+            - name: project-text
+              label: "Text-only layout"
 
-      - { name: title, label: "Title", type: string, required: true }
+      - name: title
+        label: "Title"
+        type: string
+        required: true
 
-      - { name: date, label: "Date", type: date, required: true }
+      - name: date
+        label: "Date"
+        type: date
+        required: true
 
       - name: affiliation
-        label: "Affliation/organization/firm"
-        type: text
+        label: "Affiliation/organization/firm/school/course"
+        type: string
         list: true
-        options:
-          placeholder: "Enter organization or institution"
+        description: "e.g. LKA, City of Coquitlam, UBC SALA Comprehensive Design Studio"
 
-      - {
-          name: location,
-          label: "Location",
-          type: string,
-          description: "e.g. LKA, Vancouver, BC or UBC SALA, Vancouver, BC",
-        }
+      - name: location
+        label: "Location"
+        type: string
+        list: true
+
+      - name: people
+        label: "People"
+        type: string
+        list: true
+        description: "e.g. Professor: Joanne Gates, Collaborator: Robyn Adams"
 
       - name: body
         label: "Description"
@@ -51,7 +61,10 @@ content:
         options:
           rename: true
 
-      - { name: featured, label: "Feature on homepage?", type: boolean }
+      - name: featured
+        label: "Feature on homepage?"
+        type: boolean
+
       - name: tags
         label: "Tags"
         type: select
