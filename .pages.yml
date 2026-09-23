@@ -21,6 +21,8 @@ content:
             ]
 
       - { name: title, label: "Title", type: string, required: true }
+      
+      - { name: location, label: "Location", type: string }
 
       - {
           name: date,
@@ -34,7 +36,6 @@ content:
         type: rich-text
         options:
           media: false
-      - { name: location, label: "Location", type: string }
 
       - name: images
         label: "Images"
