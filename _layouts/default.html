@@ -15,7 +15,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>{{ page.title }}</title>
+		{% if page.home_page %}
+			<title>Narita Reyes Ico</title>
+		{% else %}
+			<title>{{ page.title }} &ndash; Narita Reyes Ico</title>
+		{% endif %}
 		<meta
 			name="description"
 			content="{{ page.description | default: site.description }}"
@@ -23,7 +27,11 @@
 		<meta name="author" content="Narita Reyes Ico" />
 		<link rel="canonical" href="{{ page.url | absolute_url }}" />
 		<meta property="og:site_name" content="Narita Reyes Ico" />
-		<title>{{ page.title }}</title>
+		{% if page.home_page %}
+			<title>Narita Reyes Ico</title>
+		{% else %}
+			<title>{{ page.title }} &ndash; Narita Reyes Ico</title>
+		{% endif %}
 		<meta
 			property="og:description"
 			content="{{ page.description | default: site.description }}"

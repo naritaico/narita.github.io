@@ -90,7 +90,7 @@ h1 {
 
 h2 {
 	font-size: inherit;
-	margin: 0.2rem 0 0.4rem;
+	margin: 0.4rem 0 0.6rem;
 }
 
 p {
@@ -110,6 +110,17 @@ a:hover {
 	text-decoration-style: wavy;
 }
 
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+time {
+	font-variant-numeric: tabular-nums;
+	letter-spacing: -0.04em;
+}
+
 /* LAYOUT---------------------------------------------------------- */
 header {
 	display: flex;
@@ -127,9 +138,6 @@ nav {
 nav ul {
 	display: flex;
 	gap: 2.5rem;
-	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 nav a {
@@ -172,19 +180,10 @@ footer {
 	}
 }
 
-.body-text {
-	max-width: 44rem;
-	margin: 0 0 1rem;
-}
-
 .footer-text {
 	width: fit-content;
 	margin: 0 0 0 auto;
 	font-weight: 700;
-}
-
-.copyright {
-	cursor: pointer;
 }
 
 .copyright-name {
@@ -196,42 +195,40 @@ footer {
 }
 
 /* PAGE-SPECIFIC--------------------------------------------------- */
-.archive-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.project-layout {
+	max-width: 104rem;
+	grid-template-columns: 33% 1fr;
+	display: grid;
+	gap: 1rem;
+}
+
+.project-images img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+.about-text {
+	max-width: 44rem;
+	margin: 0 0 1rem;
 }
 
 .cv {
 	max-width: 74rem;
 	line-height: 1.2;
 
-	& time {
-		font-variant-numeric: tabular-nums;
-		letter-spacing: -0.04em;
-	}
-
-	& ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
 	& li {
 		display: grid;
 		margin: 0 0 1rem;
 		border-top: 1px solid transparent;
 		border-bottom: 1px solid transparent;
-
-		& > * {
-			padding-right: 1rem;
-			margin: 0;
-		}
+		gap: 0 1rem;
 	}
 }
 
 .cv--3col li {
-	grid-template-columns: minmax(10rem, 15%) 45% 40%;
+	grid-template-columns: minmax(10rem, 15%) 40% 45%;
 }
 
 .cv--2col li {
@@ -247,6 +244,14 @@ footer {
 }
 
 @media screen and (max-width: 58em) {
+	.project-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.project-images img {
+		width: 100%;
+	}
+
 	.cv--3col li,
 	.cv--2col li {
 		grid-template-columns: 10rem 1fr;
