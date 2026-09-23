@@ -9,17 +9,18 @@ content:
     path: _projects
     fields:
       - name: layout
-        label: "Layout"
+        label: "Layout*"
         type: select
+        required: true
         options:
           values:
             [
               { name: project-default, label: "Default" },
               { name: project-gallery, label: "Gallery" },
+              { name: project-text, label: "Text only" },
             ]
-
-      - { name: title, label: "Title", type: string }
-      - { name: date, label: "Date", type: date }
+      - { name: title, label: "Title*", type: string }
+      - { name: date, label: "Date*", type: date, format: YYYY-MM }
       - { name: body, label: "Description", type: rich-text }
       - { name: main_image, label: "Main image", type: image }
       - { name: tags, label: "Tags", type: string, list: true }
@@ -33,12 +34,6 @@ content:
         }
       - { name: awards, label: "Awards", type: boolean, required: false }
       - { name: location, label: "Location", type: string, required: false }
-      - {
-          name: external_link,
-          label: "External link",
-          type: string,
-          required: false,
-        }
       - {
           name: medium,
           label: "Medium / Material",
