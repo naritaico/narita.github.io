@@ -29,7 +29,7 @@ content:
           required: true,
         }
       
-      - { name: place, label: "Location/organization/firm", type: string }
+      - { name: place, label: "Organization/firm, location", type: string }
 
       - name: body
         label: "Description"
