@@ -1,6 +1,6 @@
 media:
-  input: assets/images/project-images
-  output: /assets/images/project-images
+  input: assets/images/uploads
+  output: /assets/images/uploads
 
 content:
   - name: projects

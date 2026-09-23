@@ -5,3 +5,9 @@ collections:
   projects:
     output: true
     permalink: /archive/:name
+exclude:
+  - package.json
+  - package-lock.json
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
