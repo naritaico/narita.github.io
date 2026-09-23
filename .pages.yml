@@ -15,9 +15,9 @@ content:
         options:
           values:
             [
-              { name: project-default, label: "Default" },
-              { name: project-gallery, label: "Gallery" },
-              { name: project-text, label: "Text only" },
+              { name: project-default, label: "Default project layout" },
+              { name: project-gallery, label: "Gallery layout" },
+              { name: project-text, label: "Text-only layout" },
             ]
 
       - { name: featured, label: "Featured", type: boolean }
@@ -38,7 +38,7 @@ content:
         label: "Tags"
         type: select
         multiple: true
-        required: true
+        min: 1
         options:
           values:
             [
