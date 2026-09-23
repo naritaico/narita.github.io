@@ -34,7 +34,6 @@ content:
       - name: location
         label: "Location"
         type: string
-        list: true
 
       - name: additional-fields
         label: "Additional fields"
