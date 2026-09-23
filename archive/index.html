@@ -7,5 +7,14 @@ extra_fonts:
   - Ronzino-Oblique
 ---
 <h1>Archive</h1>
-<p style="font-style: italic">Work in progress</p>
-</main>
+<ul class="archive-list">
+	{% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+	{% for project in sorted_projects %}
+		<li>
+			<time datetime="{{ project.date | date: '%Y-%m-%d' }}">
+				{{- project.date | date: '%Y' -}}
+			</time>
+			<a href="{{ project.url }}">{{ project.title }}</a>
+		</li>
+	{% endfor %}
+</ul>
