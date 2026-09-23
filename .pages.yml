@@ -9,7 +9,7 @@ content:
     path: _projects
     fields:
       - name: layout
-        label: "Layout*"
+        label: "Layout"
         type: select
         required: true
         options:
@@ -19,25 +19,51 @@ content:
               { name: project-gallery, label: "Gallery" },
               { name: project-text, label: "Text only" },
             ]
-      - { name: title, label: "Title*", type: string }
-      - { name: date, label: "Date*", type: date, format: YYYY-MM }
-      - { name: body, label: "Description", type: rich-text }
-      - { name: main_image, label: "Main image", type: image }
-      - { name: tags, label: "Tags", type: string, list: true }
+
       - { name: featured, label: "Featured", type: boolean }
+
+      - { name: title, label: "Title", type: string, required: true }
+
       - {
-          name: images,
-          label: "Additional images",
-          type: image,
-          list: true,
-          required: false,
+          name: date,
+          label: "Date",
+          type: date,
+          format: YYYY-MM,
+          required: true,
         }
-      - { name: awards, label: "Awards", type: boolean, required: false }
-      - { name: location, label: "Location", type: string, required: false }
-      - {
-          name: medium,
-          label: "Medium / Material",
-          type: string,
-          required: false,
-        }
-      - { name: size, label: "Size", type: string, required: false }
+
+      - { name: location, label: "Location", type: string }
+
+      - name: tags
+        label: "Tags"
+        type: select
+        multiple: true
+        required: true
+        options:
+          values:
+            [
+              { name: architecture, label: "Architecture" },
+              { name: landscape-architecture, label: "Landscape architecture" },
+              { name: art, label: "Art" },
+              { name: photography, label: "Photography" },
+              { name: publications, label: "Publications" },
+              { name: speaking, label: "Speaking" },
+              { name: awarded, label: "Awarded" },
+            ]
+
+      - name: body
+        label: "Description"
+        type: rich-text
+        options:
+          media: false
+
+      - name: images
+        label: "Images"
+        type: image
+        list: true
+        options:
+          rename: true
+
+      - { name: medium, label: "Medium / Material", type: string }
+
+      - { name: size, label: "Size", type: string }
