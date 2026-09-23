@@ -29,7 +29,7 @@ content:
           required: true,
         }
       
-      - { name: place, label: "Organization/firm, location", type: string }
+      - { name: place, label: "Organization/firm, location", type: string, description: "Enter the full project title." }
 
       - name: body
         label: "Description"
