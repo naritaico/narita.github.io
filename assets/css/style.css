@@ -195,11 +195,15 @@ footer {
 }
 
 /* PAGE-SPECIFIC--------------------------------------------------- */
-.project-layout {
+.project-layout-default {
 	max-width: 104rem;
-	grid-template-columns: 33% 1fr;
+	grid-template-columns: minmax(30rem, 33%) 1fr;
 	display: grid;
 	gap: 1rem;
+}
+
+.project-text p {
+	margin: 0 0 1rem;
 }
 
 .project-images img {
@@ -244,8 +248,8 @@ footer {
 }
 
 @media screen and (max-width: 58em) {
-	.project-layout {
-		grid-template-columns: 1fr;
+	.project-layout-default {
+		grid-template-columns: minmax(0, 38rem);
 	}
 
 	.project-images img {

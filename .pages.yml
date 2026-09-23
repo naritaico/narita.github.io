@@ -1,44 +1,44 @@
 media:
-    input: assets/images/project-images
-    output: /assets/images/project-images
+  input: assets/images/project-images
+  output: /assets/images/project-images
 
 content:
-    - name: projects
-      label: Projects
-      type: collection
-      path: _projects
-      fields:
-          - name: layout
-            label: "Layout"
-            type: select
-            options:
-                values: [project-page]
+  - name: projects
+    label: Projects
+    type: collection
+    path: _projects
+    fields:
+      - name: layout
+        label: "Layout"
+        type: select
+        options:
+          values: [project-default]
 
-          - { name: title, label: "Title", type: string }
-          - { name: date, label: "Date", type: date }
-          - { name: body, label: "Description", type: rich-text }
-          - { name: main_image, label: "Main image", type: image }
-          - { name: tags, label: "Tags", type: string, list: true }
-          - { name: featured, label: "Featured", type: boolean }
-          - {
-                name: images,
-                label: "Additional images",
-                type: image,
-                list: true,
-                required: false,
-            }
-          - { name: awards, label: "Awards", type: boolean, required: false }
-          - { name: location, label: "Location", type: string, required: false }
-          - {
-                name: external_link,
-                label: "External link",
-                type: string,
-                required: false,
-            }
-          - {
-                name: medium,
-                label: "Medium / Material",
-                type: string,
-                required: false,
-            }
-          - { name: size, label: "Size", type: string, required: false }
+      - { name: title, label: "Title", type: string }
+      - { name: date, label: "Date", type: date }
+      - { name: body, label: "Description", type: rich-text }
+      - { name: main_image, label: "Main image", type: image }
+      - { name: tags, label: "Tags", type: string, list: true }
+      - { name: featured, label: "Featured", type: boolean }
+      - {
+          name: images,
+          label: "Additional images",
+          type: image,
+          list: true,
+          required: false,
+        }
+      - { name: awards, label: "Awards", type: boolean, required: false }
+      - { name: location, label: "Location", type: string, required: false }
+      - {
+          name: external_link,
+          label: "External link",
+          type: string,
+          required: false,
+        }
+      - {
+          name: medium,
+          label: "Medium / Material",
+          type: string,
+          required: false,
+        }
+      - { name: size, label: "Size", type: string, required: false }
