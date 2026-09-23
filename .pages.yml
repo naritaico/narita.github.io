@@ -28,7 +28,6 @@ content:
           name: date,
           label: "Date",
           type: date,
-          format: YYYY-MM,
           required: true,
         }
 
@@ -37,7 +36,6 @@ content:
       - name: tags
         label: "Tags"
         type: select
-        multiple: true
         required: true
         options:
           values:
