@@ -20,8 +20,6 @@ content:
               { name: project-text, label: "Text-only layout" },
             ]
 
-
-
       - { name: title, label: "Title", type: string, required: true }
 
       - {
@@ -31,8 +29,25 @@ content:
           required: true,
         }
 
+
+
+
+
+      - name: body
+        label: "Description"
+        type: rich-text
+        options:
+          media: false
       - { name: location, label: "Location", type: string }
 
+      - name: images
+        label: "Images"
+        type: image
+        list: true
+        options:
+          rename: true
+
+      - { name: featured, label: "Feature on homepage?", type: boolean }
       - name: tags
         label: "Tags"
         type: select
@@ -53,18 +68,3 @@ content:
               label: "Speaking"
             - name: awarded
               label: "Awarded"
-
-      - name: body
-        label: "Description"
-        type: rich-text
-        options:
-          media: false
-
-      - name: images
-        label: "Images"
-        type: image
-        list: true
-        options:
-          rename: true
-
-                - { name: featured, label: "Feature on homepage?", type: boolean }
