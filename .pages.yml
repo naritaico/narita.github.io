@@ -37,6 +37,7 @@ content:
         label: "Tags"
         type: select
         options:
+          multiple: true
           values:
             - name: architecture
               label: "Architecture"
