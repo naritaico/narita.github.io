@@ -7,7 +7,6 @@ content:
     label: Projects
     type: collection
     path: _projects
-    filename: "{fields.<year>}-{fields.<month>}_{title}.md"
     fields:
       - name: layout
         label: "Choose layout"
