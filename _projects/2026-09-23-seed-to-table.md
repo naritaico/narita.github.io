@@ -1,5 +1,5 @@
 ---
-layout,: project-page
+layout: project-page
 title: seed to table
 date: 2024-04-23
 main_image: /assets/images/project-images/1 yuoqLHVvW_xQd4MSOuA3JQ.jpeg
