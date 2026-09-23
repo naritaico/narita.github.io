@@ -38,18 +38,23 @@ content:
         label: "Tags"
         type: select
         multiple: true
-        min: 1
+        required: true
         options:
           values:
-            [
-              { name: architecture, label: "Architecture" },
-              { name: landscape-architecture, label: "Landscape architecture" },
-              { name: art, label: "Art" },
-              { name: photography, label: "Photography" },
-              { name: publications, label: "Publications" },
-              { name: speaking, label: "Speaking" },
-              { name: awarded, label: "Awarded" },
-            ]
+            - name: architecture
+              label: "Architecture"
+            - name: landscape-architecture
+              label: "Landscape architecture"
+            - name: art
+              label: "Art"
+            - name: photography
+              label: "Photography"
+            - name: publications
+              label: "Publications"
+            - name: speaking
+              label: "Speaking"
+            - name: awarded
+              label: "Awarded"
 
       - name: body
         label: "Description"
