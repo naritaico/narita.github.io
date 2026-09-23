@@ -11,7 +11,6 @@ content:
       - name: layout
         label: "Layout"
         type: select
-        multiple: true
         required: true
         options:
           values:
@@ -69,7 +68,3 @@ content:
         list: true
         options:
           rename: true
-
-      - { name: medium, label: "Medium / Material", type: string }
-
-      - { name: size, label: "Size", type: string }
