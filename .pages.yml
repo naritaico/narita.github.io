@@ -41,20 +41,13 @@ content:
         required: true
         options:
           values:
-            - name: architecture
-              label: "Architecture"
-            - name: landscape-architecture
-              label: "Landscape architecture"
-            - name: art
-              label: "Art"
-            - name: photography
-              label: "Photography"
-            - name: publications
-              label: "Publications"
-            - name: speaking
-              label: "Speaking"
-            - name: awarded
-              label: "Awarded"
+            - architecture
+            - landscape-architecture
+            - art
+            - photography
+            - publications
+            - speaking
+            - awarded
 
       - name: body
         label: "Description"
