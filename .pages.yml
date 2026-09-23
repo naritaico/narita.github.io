@@ -10,7 +10,7 @@ content:
       fields:
           - name: layout,
             label: "Layout"
-            type: select,
+            type: select
             options:
                 values: [project-page]
 
