@@ -31,6 +31,11 @@ content:
         type: date
         required: true
 
+      - name: location
+        label: "Location"
+        type: string
+        list: true
+
       - name: additional-fields
         label: "Additional fields"
         type: string
