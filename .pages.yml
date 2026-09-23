@@ -8,7 +8,7 @@ content:
       type: collection
       path: _projects
       fields:
-          - name: layout,
+          - name: layout
             label: "Layout"
             type: select
             options:
