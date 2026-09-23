@@ -19,14 +19,15 @@ content:
               { name: project-gallery, label: "Gallery layout" },
               { name: project-text, label: "Text-only layout" },
             ]
+              
+      - { name: title, label: "Title", type: string, required: true }
+      
       - {
           name: date,
           label: "Date",
           type: date,
           required: true,
         }
-        
-      - { name: title, label: "Title", type: string, required: true }
       
       - { name: place, label: "Location/organization/firm", type: string }
 
