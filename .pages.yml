@@ -6,7 +6,7 @@ content:
   - name: projects
     label: Projects
     type: collection
-    filename: "{date}_{title}.md"
+    filename: "{title}.md"
     path: _projects
     fields:
       - name: layout
