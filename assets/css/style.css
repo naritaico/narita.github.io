@@ -69,7 +69,7 @@ body {
 	font-family: "Ronzino", "Helvetica", "Arial", sans-serif;
 	font-size: 1.2rem;
 	color: #443731;
-	line-height: 1.6;
+	line-height: 1.4;
 	font-kerning: normal;
 	max-width: 104rem;
 	margin: auto;
@@ -116,7 +116,7 @@ header {
 	justify-content: space-between;
 	align-items: baseline;
 	flex-wrap: wrap;
-	padding: 1rem 0 0;
+	padding: 0.6rem 0 0;
 	border-bottom: 2px solid #443731;
 }
 
@@ -196,8 +196,15 @@ footer {
 }
 
 /* PAGE-SPECIFIC--------------------------------------------------- */
+.archive-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 .cv {
 	max-width: 74rem;
+	line-height: 1.2;
 
 	& time {
 		font-variant-numeric: tabular-nums;
