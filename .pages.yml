@@ -7,6 +7,7 @@ content:
     label: Projects
     type: collection
     path: _projects
+    filename: "{fields.<year>}-{fields.<month>}_{title}.md"
     fields:
       - name: layout
         label: "Choose layout"
@@ -30,6 +31,8 @@ content:
         label: "Date"
         type: date
         required: true
+        options:
+          format: "yyyy-MM"
 
       - name: location
         label: "Location"
