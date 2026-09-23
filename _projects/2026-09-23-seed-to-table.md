@@ -7,8 +7,8 @@ tags:
   - architecture
 featured: false
 images:
-  - /assets/images/project-images/111593_19.jpg
   - /assets/images/project-images/7f2db7d639268ae9e24c68318a88dcc0.jpg
+  - /assets/images/project-images/111593_19.jpg
 awards: false
 location: Vancouver, BC
 ---
