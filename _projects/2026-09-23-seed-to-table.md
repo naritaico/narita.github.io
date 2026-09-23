@@ -11,6 +11,6 @@ images:
 awards: false
 location: Vancouver, BC
 ---
-Seed to Table adaptively reuses UBC’s Opera Warehouse into a greenhouse research facility focused on food security. Located between UBC Farm and Pacific Spirit Park, this building aims to foster community, connect the local environment, and nurture practices of growing, research and learning.
+**Seed to Table** adaptively reuses UBC’s Opera Warehouse into a greenhouse research facility focused on food security. Located between UBC Farm and Pacific Spirit Park, this building aims to foster community, connect the local environment, and nurture practices of growing, research and learning.
 
 This project will be featured in the upcoming issue of Site Magazine, to be released in July 2026.
