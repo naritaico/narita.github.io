@@ -29,7 +29,11 @@ content:
           required: true,
         }
       
-      - { name: place, label: "Organization/firm, location", type: string }
+      - name: place
+        label: "Organization/firm, location"
+        type: string
+        options:
+          placeholder: "Enter project title here"
 
       - name: body
         label: "Description"
