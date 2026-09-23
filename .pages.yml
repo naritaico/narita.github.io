@@ -36,7 +36,6 @@ content:
       - name: tags
         label: "Tags"
         type: select
-        required: true
         options:
           values:
             - name: architecture
