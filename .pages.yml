@@ -31,22 +31,11 @@ content:
         type: date
         required: true
 
-      - name: affiliation
-        label: "Affiliation/organization/firm/school/course"
+      - name: additional-fields
+        label: "Additional fields"
         type: string
         list: true
-        description: "e.g. LKA, City of Coquitlam, UBC SALA Comprehensive Design Studio"
-
-      - name: location
-        label: "Location"
-        type: string
-        list: true
-
-      - name: people
-        label: "People"
-        type: string
-        list: true
-        description: "e.g. Professor: Joanne Gates, Collaborator: Robyn Adams"
+        description: "You can add firm/school/affiliation/organization, location, people"
 
       - name: body
         label: "Description"
