@@ -19,17 +19,24 @@ content:
               { name: project-gallery, label: "Gallery layout" },
               { name: project-text, label: "Text-only layout" },
             ]
-              
+
       - { name: title, label: "Title", type: string, required: true }
-      
+
+      - { name: date, label: "Date", type: date, required: true }
+
+      - name: affiliation
+        label: "Affliation/organization/firm"
+        type: text
+        list: true
+        options:
+          placeholder: "Enter organization or institution"
+
       - {
-          name: date,
-          label: "Date",
-          type: date,
-          required: true,
+          name: location,
+          label: "Location",
+          type: string,
+          description: "e.g. LKA, Vancouver, BC or UBC SALA, Vancouver, BC",
         }
-      
-      - { name: place, label: "Organization/firm, location", type: string, description: "Enter the full project title." }
 
       - name: body
         label: "Description"
