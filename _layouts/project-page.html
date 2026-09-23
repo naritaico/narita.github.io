@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<div class="project-layout">
+	<div class="project-text">
+		<p>{{ page.description }}</p>
+		{% if page.medium -%}
+			<p>{{ page.medium }}</p>
+		{%- endif %}
+		{% if page.size -%}
+			<p>{{ page.size }}</p>
+		{%- endif %}
+		{% if page.location -%}
+			<p>{{ page.location }}</p>
+		{%- endif %}
+		{% if page.external_link %}
+			<p
+				><a href="{{ page.external_link }}" target="_blank"
+					>External link</a
+				></p
+			>
+		{% endif %}
+	</div>
+	<div class="project-images">
+		<img src="{{ page.main_image }}" alt="{{ page.title }}">
+		{% for image in page.images %}
+			<img src="{{ image }}" alt="{{ page.title }}">
+		{% endfor %}
+	</div>
+</div>
