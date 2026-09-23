@@ -32,7 +32,7 @@ content:
         required: true
         default: ""
         options:
-          format: "yyyy-MM"
+          format: yyyy-MM
 
       - name: location
         label: "Location"
