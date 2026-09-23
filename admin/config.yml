@@ -1,5 +1,6 @@
 backend:
-    name: git-gateway
+    name: github
+    repo: narita-ico/narita.github.io
     branch: main
 
 media_folder: "assets/images/project-images/{{slug}}"
