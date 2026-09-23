@@ -35,7 +35,7 @@ content:
         label: "Additional fields"
         type: string
         list: true
-        description: "You can add firm/school/affiliation/organization, people, awards, etc."
+        description: "You can add firm/school/affiliation/organization, course, people, awards, etc."
 
       - name: body
         label: "Description"
