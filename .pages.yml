@@ -29,10 +29,6 @@ content:
           required: true,
         }
 
-
-
-
-
       - name: body
         label: "Description"
         type: rich-text
