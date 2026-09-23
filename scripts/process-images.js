@@ -13,8 +13,8 @@ const MAX_WIDTH = 2000; // images wider than this (in pixels) get shrunk
 const QUALITY = 80; // webp quality, 1-100
 // --------------------------------------------------------
 
-// Turns a filename like "My Project.md" into "my-project",
-// the same way Jekyll builds the URL from the filename.
+// Converts a project filename into a URL-safe folder name,
+// e.g. "My Project.md" becomes "my-project".
 function slugify(name) {
 	return name
 		.toLowerCase()
@@ -30,11 +30,10 @@ function splitFrontMatter(text) {
 	return { frontMatter: match[1], body: match[2] };
 }
 
-async function processProject(file) {
-	const slug = slugify(path.basename(file, ".md"));
+async function processProject(file, slug, uploadsToDelete) {
 	const projectPath = path.join(PROJECTS_DIR, file);
 	const parts = splitFrontMatter(fs.readFileSync(projectPath, "utf8"));
-	if (!parts) return slug;
+	if (!parts) return;
 
 	const doc = YAML.parseDocument(parts.frontMatter);
 	const data = doc.toJS() || {};
@@ -48,22 +47,27 @@ async function processProject(file) {
 	// No images listed: remove the project's image folder if it exists.
 	if (images.length === 0) {
 		fs.rmSync(folder, { recursive: true, force: true });
-		return slug;
+		return;
 	}
 
-	// Work out where each listed image currently lives.
+	// Check everything BEFORE changing any files. Any problem stops the run.
+	if (!images.every((url) => typeof url === "string")) {
+		throw new Error(`${file}: the images list must contain only file paths`);
+	}
+
 	const entries = images.map((url) => {
-		let source = null;
+		let source;
 		let isNew = false;
 		if (url.startsWith(UPLOADS_URL)) {
 			source = path.join(UPLOADS_DIR, path.basename(url));
 			isNew = true;
 		} else if (url.startsWith(OUTPUT_URL)) {
 			source = url.slice(1); // drop the leading slash
+		} else {
+			throw new Error(`${file}: unsupported image path: ${url}`);
 		}
-		if (source && !fs.existsSync(source)) {
-			console.warn(`  ! ${file}: file not found, leaving as is: ${url}`);
-			source = null;
+		if (!fs.existsSync(source)) {
+			throw new Error(`${file}: image file not found: ${url}`);
 		}
 		return { url, source, isNew };
 	});
@@ -73,7 +77,6 @@ async function processProject(file) {
 	// Step 1: write every image to a temporary name, in list order.
 	let count = 0;
 	for (const entry of entries) {
-		if (!entry.source) continue;
 		count++;
 		entry.tmp = path.join(folder, `.tmp-${count}.webp`);
 		if (entry.isNew) {
@@ -97,30 +100,24 @@ async function processProject(file) {
 	// Step 3: rename the temporary files to image-01.webp, image-02.webp, ...
 	count = 0;
 	const newImages = entries.map((entry) => {
-		if (!entry.source) return entry.url;
 		count++;
 		const name = `image-${String(count).padStart(2, "0")}.webp`;
 		fs.renameSync(entry.tmp, path.join(folder, name));
 		return `${OUTPUT_URL}${slug}/${name}`;
 	});
 
-	// Step 4: delete the staging uploads we just processed.
+	// Step 4: remember which staging uploads to delete once everything is done.
 	for (const entry of entries) {
-		if (entry.isNew && entry.source) fs.rmSync(entry.source, { force: true });
+		if (entry.isNew) uploadsToDelete.add(entry.source);
 	}
 
 	// Step 5: update the images list in the project file, only if it changed.
 	if (JSON.stringify(newImages) !== JSON.stringify(images)) {
 		doc.set("images", newImages);
 		const newFrontMatter = doc.toString({ lineWidth: 0 });
-		fs.writeFileSync(
-			projectPath,
-			`---\n${newFrontMatter}---\n${parts.body}`,
-		);
+		fs.writeFileSync(projectPath, `---\n${newFrontMatter}---\n${parts.body}`);
 		console.log(`  updated ${file}: ${newImages.length} image(s)`);
 	}
-
-	return slug;
 }
 
 async function main() {
@@ -131,10 +128,18 @@ async function main() {
 
 	const files = fs.readdirSync(PROJECTS_DIR).filter((f) => f.endsWith(".md"));
 	const slugs = new Set();
+	const uploadsToDelete = new Set();
 
 	for (const file of files) {
+		const slug = slugify(path.basename(file, ".md"));
+		if (slugs.has(slug)) {
+			throw new Error(
+				`${file}: another project file produces the same folder name "${slug}"`,
+			);
+		}
+		slugs.add(slug);
 		console.log(`Processing ${file}`);
-		slugs.add(await processProject(file));
+		await processProject(file, slug, uploadsToDelete);
 	}
 
 	// Delete image folders that no longer have a matching project file.
@@ -150,10 +155,15 @@ async function main() {
 		}
 	}
 
+	// Last step: delete the staging uploads that were processed.
+	for (const upload of uploadsToDelete) {
+		fs.rmSync(upload, { force: true });
+	}
+
 	console.log("Done.");
 }
 
 main().catch((err) => {
-	console.error(err);
+	console.error(err.message || err);
 	process.exit(1);
 });
