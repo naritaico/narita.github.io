@@ -22,7 +22,7 @@ content:
 
       - { name: title, label: "Title", type: string, required: true }
       
-      - { name: location, label: "Location", type: string }
+      - { name: place, label: "Location/organization/firm", type: string }
 
       - {
           name: date,
