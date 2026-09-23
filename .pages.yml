@@ -9,7 +9,7 @@ content:
     path: _projects
     fields:
       - name: layout
-        label: "Layout"
+        label: "Choose layout"
         type: select
         required: true
         options:
@@ -20,7 +20,7 @@ content:
               { name: project-text, label: "Text-only layout" },
             ]
 
-      - { name: featured, label: "Featured", type: boolean }
+
 
       - { name: title, label: "Title", type: string, required: true }
 
@@ -66,3 +66,5 @@ content:
         list: true
         options:
           rename: true
+
+                - { name: featured, label: "Feature on homepage?", type: boolean }
