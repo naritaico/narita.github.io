@@ -31,6 +31,7 @@ content:
         type: date
         required: true
         options:
+          default: ""
           format: "yyyy-MM"
 
       - name: location
