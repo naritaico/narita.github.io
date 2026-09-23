@@ -11,6 +11,9 @@ images:
   - /assets/images/project-images/111593_19.jpg
 awards: false
 location: Vancouver, BC
+external_link: naritareyesico.com
+medium: Digital
+size: 30cm x 30cm
 ---
 **Seed to Table** adaptively reuses UBC’s Opera Warehouse into a greenhouse research facility focused on food security. Located between UBC Farm and Pacific Spirit Park, this building aims to foster community, connect the local environment, and nurture practices of growing, research and learning.
 
