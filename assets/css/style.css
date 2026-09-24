@@ -55,7 +55,7 @@
 	font-display: swap;
 }
 
-/* DOCUMENT-------------------------------------------------------- */
+/* DEFAULTS-------------------------------------------------------- */
 html {
 	scrollbar-gutter: stable;
 	-webkit-text-size-adjust: 100%;
@@ -71,7 +71,7 @@ body {
 	color: #443731;
 	line-height: 1.4;
 	font-kerning: normal;
-	max-width: 104rem;
+	/* max-width: 104rem; */
 	margin: auto;
 	padding-inline: 1rem;
 	min-height: 100vh;
@@ -121,7 +121,7 @@ time {
 	letter-spacing: -0.04em;
 }
 
-/* LAYOUT---------------------------------------------------------- */
+/* HEADER+FOOTER--------------------------------------------------- */
 header {
 	display: flex;
 	justify-content: space-between;
@@ -129,30 +129,12 @@ header {
 	flex-wrap: wrap;
 	padding: 0.6rem 0 0;
 	border-bottom: 2px solid #443731;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 1;
 }
 
-nav {
-	font-weight: 700;
-}
-
-nav ul {
-	display: flex;
-	gap: 2.5rem;
-}
-
-nav a {
-	text-decoration: none;
-}
-
-main {
-	margin: 0.6rem 0 auto;
-}
-
-footer {
-	margin: 3rem 0 0.8rem;
-}
-
-/* COMPONENTS------------------------------------------------------ */
 .site-title {
 	color: #443731;
 	text-decoration: none;
@@ -180,14 +162,34 @@ footer {
 	}
 }
 
-.project-title {
-	margin: 0 0 0.2rem;
+nav {
+	font-weight: 700;
+}
+
+nav ul {
+	display: flex;
+	gap: 2.5rem;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+main {
+	margin: 0.6rem 0 auto;
+}
+
+footer {
+	margin: 3rem 0 0.8rem;
 }
 
 .footer-text {
 	width: fit-content;
 	margin: 0 0 0 auto;
 	font-weight: 700;
+	user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
 }
 
 .copyright-name {
@@ -198,7 +200,7 @@ footer {
 	display: inline;
 }
 
-/* PAGE-SPECIFIC--------------------------------------------------- */
+/* HOME_PAGE------------------------------------------------------- */
 .featured-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -217,7 +219,7 @@ footer {
 .featured-project img {
 	display: block;
 	width: 100%;
-	aspect-ratio: 3 / 4;
+	aspect-ratio: 4 / 3;
 	object-fit: cover;
 }
 
@@ -233,6 +235,7 @@ footer {
 	color: #443731;
 }
 
+/* ARCHIVES_PAGE--------------------------------------------------- */
 .archive-list {
 	max-width: 44rem;
 	line-height: 1.8;
@@ -253,11 +256,20 @@ footer {
 		white-space: nowrap;
 		text-align: right;
 	}
+
+	& img {
+		display: none;
+	}
+}
+
+/* PROJECT_LAYOUTS------------------------------------------------- */
+.project-title {
+	margin: 0 0 0.2rem;
 }
 
 .project-layout-default {
 	max-width: 104rem;
-	grid-template-columns: minmax(30rem, 33%) 1fr;
+	grid-template-columns: minmax(32rem, 33%) 1fr;
 	display: grid;
 	gap: 1rem;
 }
@@ -281,11 +293,13 @@ footer {
 	margin-bottom: 1rem;
 }
 
+/* ABOUT_PAGE------------------------------------------------------ */
 .about-text {
 	max-width: 44rem;
 	margin: 0 0 1rem;
 }
 
+/* CV_PAGE--------------------------------------------------------- */
 .cv {
 	max-width: 74rem;
 	line-height: 1.2;
@@ -315,11 +329,29 @@ footer {
 	}
 }
 
-@media screen and (max-width: 58em) {
+@media (hover: hover) and (min-width: 82em) {
+	.archive-list li:hover img,
+	.archive-list li:focus-within img {
+		display: block;
+		position: fixed;
+		top: 4.5rem;
+		left: 56rem;
+		max-width: 30vw;
+		max-height: 80vh;
+	}
+}
+
+@media screen and (max-width: 80em) {
 	.project-layout-default {
 		grid-template-columns: minmax(0, 38rem);
 	}
 
+	.featured-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 58em) {
 	.project-images img {
 		width: 100%;
 	}
@@ -338,10 +370,6 @@ footer {
 	.cv--3col li > :nth-child(3) {
 		grid-column: 2;
 	}
-
-	.featured-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
 }
 
 @media screen and (max-width: 44em) {
@@ -352,16 +380,12 @@ footer {
 	.featured-project-title {
 		visibility: visible;
 	}
+	.featured-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 @media screen and (max-width: 38em) {
-	header {
-		position: sticky;
-		top: 0;
-		background-color: white;
-		z-index: 1;
-	}
-
 	nav {
 		position: fixed;
 		bottom: 0;
@@ -403,9 +427,6 @@ footer {
 	}
 	.cv--3col li > :not(:first-child, :nth-child(2)) {
 		padding-left: 1.8rem;
-	}
-	.featured-grid {
-		grid-template-columns: repeat(1, 1fr);
 	}
 }
 
