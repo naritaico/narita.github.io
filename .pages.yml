@@ -14,6 +14,7 @@ content:
         type: select
         required: true
         default: project-default
+        description: "Don't add images if using the text-only layout"
         options:
           values:
             - name: project-default
@@ -53,7 +54,6 @@ content:
         label: "Images"
         type: image
         list: true
-        description: "Don't add images if using the text-only layout"
         options:
           rename: true
 
