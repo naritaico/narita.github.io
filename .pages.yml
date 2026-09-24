@@ -41,7 +41,7 @@ content:
         label: "Additional fields"
         type: string
         list: true
-        description: "studio/firm/school/affiliation/organization, course, people, awards, etc."
+        description: "Studio/firm/school/affiliation/organization, course, people, awards, etc."
 
       - name: body
         label: "Description"
