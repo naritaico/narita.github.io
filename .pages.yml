@@ -13,6 +13,7 @@ content:
         label: "Choose layout"
         type: select
         required: true
+        default: project-default
         options:
           values:
             - name: project-default
@@ -24,11 +25,13 @@ content:
         label: "Title"
         type: string
         required: true
+        description: "Dont' make the title super long"
 
       - name: date
         label: "Date"
         type: date
         required: true
+        description: "Month & year only, just use first day of the month"
 
       - name: location
         label: "Location"
@@ -38,7 +41,7 @@ content:
         label: "Additional fields"
         type: string
         list: true
-        description: "You can add firm/school/affiliation/organization, course, people, awards, etc."
+        description: "studio/firm/school/affiliation/organization, course, people, awards, etc."
 
       - name: body
         label: "Description"
@@ -50,6 +53,7 @@ content:
         label: "Images"
         type: image
         list: true
+        description: "Don't add images if using the text-only layout"
         options:
           rename: true
 
