@@ -207,6 +207,8 @@ footer {
 
 .featured-project {
 	display: block;
+	font-weight: 700;
+	text-decoration: none;
 }
 
 .featured-project img {
