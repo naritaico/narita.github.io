@@ -18,6 +18,9 @@ extra_fonts:
 					{{- project.date | date: '%b %Y' -}}
 				</time>
 			</a>
+			{% if project.images.size > 0 %}
+				<img src="{{ project.images.first }}" alt="" loading="lazy">
+			{% endif %}
 		</li>
 	{% endfor %}
 </ul>
