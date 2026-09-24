@@ -25,7 +25,7 @@ content:
         label: "Title"
         type: string
         required: true
-        description: "Dont' make the title super long"
+        description: "Don't make the title super long"
 
       - name: date
         label: "Date"
