@@ -102,12 +102,12 @@ a {
 	text-decoration: underline;
 	text-decoration-thickness: 0.06em;
 	text-underline-offset: 0.1em;
-}
 
-a:hover {
-	color: #ec5447;
-	text-decoration: underline;
-	text-decoration-style: wavy;
+	&:hover {
+		color: #ec5447;
+		text-decoration: underline;
+		text-decoration-style: wavy;
+	}
 }
 
 ul {
@@ -164,15 +164,15 @@ header {
 
 nav {
 	font-weight: 700;
-}
 
-nav ul {
-	display: flex;
-	gap: 2.5rem;
-}
+	& ul {
+		display: flex;
+		gap: 2.5rem;
+	}
 
-nav a {
-	text-decoration: none;
+	& a {
+		text-decoration: none;
+	}
 }
 
 main {
@@ -190,14 +190,14 @@ footer {
 	user-select: none;
 	-webkit-user-select: none;
 	cursor: default;
-}
 
-.copyright-name {
-	display: none;
-}
+	& .copyright-name {
+		display: none;
+	}
 
-.copyright:hover .copyright-name {
-	display: inline;
+	& .copyright:hover .copyright-name {
+		display: inline;
+	}
 }
 
 /* HOME_PAGE------------------------------------------------------- */
@@ -211,28 +211,29 @@ footer {
 	display: block;
 	font-weight: 700;
 	text-decoration: none;
+
 	&:hover {
 		text-decoration: none;
 	}
-}
 
-.featured-project img {
-	display: block;
-	width: 100%;
-	aspect-ratio: 4 / 3;
-	object-fit: cover;
+	& img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+	}
+
+	&:hover .featured-project-title {
+		visibility: visible;
+		display: block;
+		color: #443731;
+	}
 }
 
 .featured-project-title {
 	margin-top: 0.5rem;
 	text-align: left;
 	visibility: hidden;
-}
-
-.featured-project:hover .featured-project-title {
-	visibility: visible;
-	display: block;
-	color: #443731;
 }
 
 /* ARCHIVES_PAGE--------------------------------------------------- */
@@ -245,10 +246,10 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		gap: 1rem;
-	}
 
-	& a:hover {
-		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	& time {
@@ -286,11 +287,13 @@ footer {
 	}
 }
 
-.project-images img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin-bottom: 1rem;
+.project-images {
+	& img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 1rem;
+	}
 }
 
 /* ABOUT_PAGE------------------------------------------------------ */
@@ -370,15 +373,15 @@ footer {
 	.cv--3col li > :nth-child(3) {
 		grid-column: 2;
 	}
+	.featured-project-title {
+		visibility: visible;
+	}
 }
 
 @media screen and (max-width: 44em) {
 	.cv--3col li,
 	.cv--2col li {
 		grid-template-columns: 10rem 1fr;
-	}
-	.featured-project-title {
-		visibility: visible;
 	}
 	.featured-grid {
 		grid-template-columns: repeat(1, 1fr);
