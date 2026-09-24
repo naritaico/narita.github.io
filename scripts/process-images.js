@@ -121,12 +121,11 @@ async function processProject(file, slug, uploadsToDelete) {
 }
 
 async function main() {
-	if (!fs.existsSync(PROJECTS_DIR)) {
-		console.error(`Cannot find ${PROJECTS_DIR}, stopping.`);
-		process.exit(1);
-	}
-
-	const files = fs.readdirSync(PROJECTS_DIR).filter((f) => f.endsWith(".md"));
+	// Git does not keep empty folders, so deleting the last project also removes
+	// the _projects folder. Treat a missing folder as "no projects".
+	const files = fs.existsSync(PROJECTS_DIR)
+		? fs.readdirSync(PROJECTS_DIR).filter((f) => f.endsWith(".md"))
+		: [];
 	const slugs = new Set();
 	const uploadsToDelete = new Set();
 
