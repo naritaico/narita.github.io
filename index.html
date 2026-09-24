@@ -17,3 +17,15 @@ extra_fonts:
 		>wovenlight collective (pdf)</a
 	>
 </p>
+
+<h1>Featured Work</h1>
+
+<ul>
+	{% assign featured_projects = site.projects | where: 'featured', true %}
+
+	{% for project in featured_projects %}
+		<li>
+			<a href="{{ project.url }}">{{ project.title }}</a>
+		</li>
+	{% endfor %}
+</ul>

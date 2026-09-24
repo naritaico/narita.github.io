@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<p style="font-weight: 700; margin-bottom: 3rem;"
+	><a href="/archive">Archive</a></p
+>
+
+<div class="project-layout-text">
+	<h1 class="project-title">{{ page.title }}</h1>
+	<p>
+		<time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+			{{- page.date | date: '%b %Y' -}}
+		</time>
+	</p>
+	{% if page.location %}
+		<p>{{ page.location }}</p>
+	{% endif %}
+	{% for field in page['additional-fields'] %}
+		<p>{{ field }}</p>
+	{% endfor %}
+	<div class="project-description">{{ content }}</div>
+</div>

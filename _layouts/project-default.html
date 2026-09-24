@@ -1,24 +1,25 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<p style="font-weight: 700; margin-bottom: 3rem;"
+	><a href="/archive">Archive</a></p
+>
+
 <div class="project-layout-default">
 	<div class="project-text">
-		<div>{{ content }}</div>
-		{% if page.medium -%}
-			<p>{{ page.medium }}</p>
-		{%- endif %}
-		{% if page.size -%}
-			<p>{{ page.size }}</p>
-		{%- endif %}
-		{% if page.location -%}
+		<h1 class="project-title">{{ page.title }}</h1>
+		<p>
+			<time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+				{{- page.date | date: '%b %Y' -}}
+			</time>
+		</p>
+		{% if page.location %}
 			<p>{{ page.location }}</p>
-		{%- endif %}
-		{% if page.external_link %}
-			<p
-				><a href="{{ page.external_link }}" target="_blank">External link</a></p
-			>
 		{% endif %}
+		{% for field in page['additional-fields'] %}
+			<p>{{ field }}</p>
+		{% endfor %}
+		<div class="project-description">{{ content }}</div>
 	</div>
 	<div class="project-images">
 		{% for image in page.images %}

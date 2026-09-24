@@ -16,9 +16,7 @@ content:
         options:
           values:
             - name: project-default
-              label: "Default project layout"
-            - name: project-gallery
-              label: "Gallery layout"
+              label: "Project layout with images"
             - name: project-text
               label: "Text-only layout"
 

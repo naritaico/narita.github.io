@@ -8,15 +8,16 @@ extra_fonts:
 ---
 <h1>Archive</h1>
 
-<p style="font-style: italic;">Work in progress</p>
 <ul class="archive-list">
 	{% assign sorted_projects = site.projects | sort: 'date' | reverse %}
 	{% for project in sorted_projects %}
 		<li>
-			<time datetime="{{ project.date | date: '%Y-%m-%d' }}">
-				{{- project.date | date: '%Y' -}}
-			</time>
-			<a href="{{ project.url }}">{{ project.title }}</a>
+			<a href="{{ project.url }}">
+				{{ project.title }}
+				<time datetime="{{ project.date | date: '%Y-%m-%d' }}">
+					{{- project.date | date: '%b %Y' -}}
+				</time>
+			</a>
 		</li>
 	{% endfor %}
 </ul>
