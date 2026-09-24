@@ -5,27 +5,25 @@ home_page: true
 extra_fonts:
   - Ronzino-Oblique
 ---
-<p style="margin-top: 80px; font-style: italic">
-	<a href="/assets/documents/architecture-portfolio-2026.pdf" target="_blank"
-		>Portfolio (pdf)</a
-	>
-</p>
-<p style="font-style: italic">
-	<a
-		href="/assets/documents/wovenlight-collective-portfolio-2026.pdf"
-		target="_blank"
-		>wovenlight collective (pdf)</a
-	>
-</p>
+{% assign featured_projects = site.projects
+	| where: 'featured', true
+	| sort: 'date'
+	| reverse
+%}
 
-<h1>Featured Work</h1>
-
-<ul>
-	{% assign featured_projects = site.projects | where: 'featured', true %}
-
+<div class="featured-grid">
 	{% for project in featured_projects %}
-		<li>
-			<a href="{{ project.url }}">{{ project.title }}</a>
-		</li>
+		{% if project.images and project.images.size > 0 %}
+			<a class="featured-project" href="{{ project.url }}">
+				<img
+					src="{{ project.images[0] | relative_url }}"
+					alt="{{ project.title }}"
+				>
+
+				<div class="featured-project-title">
+					{{ project.title }}
+				</div>
+			</a>
+		{% endif %}
 	{% endfor %}
-</ul>
+</div>

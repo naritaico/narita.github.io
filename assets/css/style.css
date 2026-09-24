@@ -199,6 +199,28 @@ footer {
 }
 
 /* PAGE-SPECIFIC--------------------------------------------------- */
+.featured-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.featured-project {
+	display: block;
+}
+
+.featured-project img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+}
+
+.featured-project-title {
+	margin-top: 0.5rem;
+	text-align: left;
+}
+
 .archive-list {
 	max-width: 44rem;
 	line-height: 1.8;
