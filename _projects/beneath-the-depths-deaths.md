@@ -6,13 +6,13 @@ additional-fields:
   - "Collaborators: Angelica Ragandac-Ladrera & Hoi Ying Ng "
   - UBC SALA LARC 504
 images:
-  - /assets/images/uploads/cover-image.jpg
-  - /assets/images/uploads/2023-section.jpg
-  - /assets/images/uploads/2050-section.jpg
-  - /assets/images/uploads/2100-section.jpg
-  - /assets/images/uploads/phasing-2023.jpg
-  - /assets/images/uploads/phasing-2050.jpg
-  - /assets/images/uploads/phasing-2100.jpg
+  - /assets/images/project-images/beneath-the-depths-deaths/image-01.webp
+  - /assets/images/project-images/beneath-the-depths-deaths/image-02.webp
+  - /assets/images/project-images/beneath-the-depths-deaths/image-03.webp
+  - /assets/images/project-images/beneath-the-depths-deaths/image-04.webp
+  - /assets/images/project-images/beneath-the-depths-deaths/image-05.webp
+  - /assets/images/project-images/beneath-the-depths-deaths/image-06.webp
+  - /assets/images/project-images/beneath-the-depths-deaths/image-07.webp
 featured: true
 tags:
   - landscape-architecture
