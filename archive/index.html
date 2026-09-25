@@ -15,7 +15,10 @@ extra_fonts:
 			<a href="{{ project.url }}">
 				{{ project.title }}
 				<time datetime="{{ project.date | date: '%Y-%m-%d' }}">
-					{{- project.date | date: '%b %Y' -}}
+					<span style="letter-spacing: 0;">
+						{{ project.date | date: '%b' }}
+					</span>
+					<span>{{ project.date | date: '%Y' }}</span>
 				</time>
 			</a>
 			{% if project.images.size > 0 %}
