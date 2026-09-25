@@ -4,9 +4,9 @@ title: Passages of the Canals
 date: 2025-10-01
 location: Venice, Italy
 images:
-  - /assets/images/uploads/tapestry-compressed.jpg
-  - /assets/images/uploads/compressed-closeup.jpg
-  - /assets/images/uploads/compressed-symbology.jpg
+  - /assets/images/project-images/passages-of-the-canals/image-01.webp
+  - /assets/images/project-images/passages-of-the-canals/image-02.webp
+  - /assets/images/project-images/passages-of-the-canals/image-03.webp
 featured: true
 tags:
   - awarded
