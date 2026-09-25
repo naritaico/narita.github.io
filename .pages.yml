@@ -82,3 +82,80 @@ content:
               label: "Speaking"
             - name: awarded
               label: "Awarded"
+
+  - name: cv
+    label: CV
+    file: cv-test.html
+    fields:
+      - &cv_titles
+        name: titles
+        label: Titles
+        type: list
+        fields:
+          - name: text
+            label: Text
+            type: string
+            required: true
+          - name: style
+            label: Style
+            type: select
+            options:
+              values:
+                - { name: normal, label: Normal }
+                - { name: italic, label: Italic }
+            default: normal
+          - name: language
+            label: "Language code (optional, e.g. tl)"
+            type: string
+
+      - &cv_3col_fields
+        - name: start_date
+          label: Start date
+          type: date
+          required: true
+        - name: end_date
+          label: End date
+          type: date
+        - name: current
+          label: "Still ongoing (shows “present”)"
+          type: boolean
+          default: false
+        - *cv_titles
+        - name: institution
+          label: Institution
+          type: string
+        - name: location
+          label: Location
+          type: string
+
+      - name: education
+        label: Education
+        type: list
+        fields: *cv_3col_fields
+      - name: work_experience
+        label: Work Experience
+        type: list
+        fields: *cv_3col_fields
+      - name: fellowships
+        label: Fellowships
+        type: list
+        fields: *cv_3col_fields
+      - name: scholarships_grants
+        label: "Scholarships & Grants"
+        type: list
+        fields:
+          - name: date
+            label: Date
+            type: date
+            required: true
+          - name: title
+            label: Title
+            type: string
+            required: true
+      - name: exhibitions
+        label: Exhibitions
+        type: list
+        fields: *cv_3col_fields
+      - name: updated_note
+        label: 'Updated note (e.g. "September 2026")'
+        type: string
