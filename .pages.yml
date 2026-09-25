@@ -87,8 +87,7 @@ content:
     label: CV
     file: cv-test.html
     fields:
-      - &cv_titles
-        name: titles
+      - name: titles
         label: Titles
         type: list
         fields:
@@ -101,15 +100,15 @@ content:
             type: select
             options:
               values:
-                - { name: normal, label: Normal }
-                - { name: italic, label: Italic }
+                - name: normal
+                  label: Normal
+                - name: italic
+                  label: Italic
             default: normal
           - name: language
-            label: "Language code (optional, e.g. tl)"
+            label: Language code (optional, e.g. tl)
             type: string
-
-      - &cv_3col_fields
-        - name: start_date
+      - - name: start_date
           label: Start date
           type: date
           required: true
@@ -117,31 +116,164 @@ content:
           label: End date
           type: date
         - name: current
-          label: "Still ongoing (shows “present”)"
+          label: Still ongoing (shows “present”)
           type: boolean
           default: false
-        - *cv_titles
+        - name: titles
+          label: Titles
+          type: list
+          fields:
+            - name: text
+              label: Text
+              type: string
+              required: true
+            - name: style
+              label: Style
+              type: select
+              options:
+                values:
+                  - name: normal
+                    label: Normal
+                  - name: italic
+                    label: Italic
+              default: normal
+            - name: language
+              label: Language code (optional, e.g. tl)
+              type: string
         - name: institution
           label: Institution
           type: string
         - name: location
           label: Location
           type: string
-
       - name: education
         label: Education
         type: list
-        fields: *cv_3col_fields
+        fields:
+          - name: start_date
+            label: Start date
+            type: date
+            required: true
+          - name: end_date
+            label: End date
+            type: date
+          - name: current
+            label: Still ongoing (shows “present”)
+            type: boolean
+            default: false
+          - name: titles
+            label: Titles
+            type: list
+            fields:
+              - name: text
+                label: Text
+                type: string
+                required: true
+              - name: style
+                label: Style
+                type: select
+                options:
+                  values:
+                    - name: normal
+                      label: Normal
+                    - name: italic
+                      label: Italic
+                default: normal
+              - name: language
+                label: Language code (optional, e.g. tl)
+                type: string
+          - name: institution
+            label: Institution
+            type: string
+          - name: location
+            label: Location
+            type: string
       - name: work_experience
         label: Work Experience
         type: list
-        fields: *cv_3col_fields
+        fields:
+          - name: start_date
+            label: Start date
+            type: date
+            required: true
+          - name: end_date
+            label: End date
+            type: date
+          - name: current
+            label: Still ongoing (shows “present”)
+            type: boolean
+            default: false
+          - name: titles
+            label: Titles
+            type: list
+            fields:
+              - name: text
+                label: Text
+                type: string
+                required: true
+              - name: style
+                label: Style
+                type: select
+                options:
+                  values:
+                    - name: normal
+                      label: Normal
+                    - name: italic
+                      label: Italic
+                default: normal
+              - name: language
+                label: Language code (optional, e.g. tl)
+                type: string
+          - name: institution
+            label: Institution
+            type: string
+          - name: location
+            label: Location
+            type: string
       - name: fellowships
         label: Fellowships
         type: list
-        fields: *cv_3col_fields
+        fields:
+          - name: start_date
+            label: Start date
+            type: date
+            required: true
+          - name: end_date
+            label: End date
+            type: date
+          - name: current
+            label: Still ongoing (shows “present”)
+            type: boolean
+            default: false
+          - name: titles
+            label: Titles
+            type: list
+            fields:
+              - name: text
+                label: Text
+                type: string
+                required: true
+              - name: style
+                label: Style
+                type: select
+                options:
+                  values:
+                    - name: normal
+                      label: Normal
+                    - name: italic
+                      label: Italic
+                default: normal
+              - name: language
+                label: Language code (optional, e.g. tl)
+                type: string
+          - name: institution
+            label: Institution
+            type: string
+          - name: location
+            label: Location
+            type: string
       - name: scholarships_grants
-        label: "Scholarships & Grants"
+        label: Scholarships & Grants
         type: list
         fields:
           - name: date
@@ -155,7 +287,45 @@ content:
       - name: exhibitions
         label: Exhibitions
         type: list
-        fields: *cv_3col_fields
+        fields:
+          - name: start_date
+            label: Start date
+            type: date
+            required: true
+          - name: end_date
+            label: End date
+            type: date
+          - name: current
+            label: Still ongoing (shows “present”)
+            type: boolean
+            default: false
+          - name: titles
+            label: Titles
+            type: list
+            fields:
+              - name: text
+                label: Text
+                type: string
+                required: true
+              - name: style
+                label: Style
+                type: select
+                options:
+                  values:
+                    - name: normal
+                      label: Normal
+                    - name: italic
+                      label: Italic
+                default: normal
+              - name: language
+                label: Language code (optional, e.g. tl)
+                type: string
+          - name: institution
+            label: Institution
+            type: string
+          - name: location
+            label: Location
+            type: string
       - name: updated_note
-        label: 'Updated note (e.g. "September 2026")'
+        label: Updated note (e.g. "September 2026")
         type: string
