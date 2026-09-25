@@ -308,7 +308,7 @@ footer {
 
 /* CV_PAGE--------------------------------------------------------- */
 .cv {
-	max-width: 74rem;
+	max-width: 78rem;
 	line-height: 1.2;
 
 	& li {
@@ -321,11 +321,11 @@ footer {
 }
 
 .cv--3col li {
-	grid-template-columns: minmax(10rem, 15%) 40% 45%;
+	grid-template-columns: minmax(10rem, 15%) minmax(0, 40%) minmax(0, 45%);
 }
 
 .cv--2col li {
-	grid-template-columns: minmax(10rem, 15%) 85%;
+	grid-template-columns: minmax(10rem, 15%) minmax(0, 85%);
 }
 
 /* RESPONSIVE------------------------------------------------------ */
