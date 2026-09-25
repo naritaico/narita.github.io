@@ -239,7 +239,11 @@ footer {
 /* ARCHIVES_PAGE--------------------------------------------------- */
 .archive-list {
 	max-width: 44rem;
-	line-height: 1.8;
+	line-height: 1.2;
+
+	& li {
+		margin-bottom: 0.6rem;
+	}
 
 	& a {
 		text-decoration: none;
