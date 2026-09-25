@@ -356,6 +356,9 @@ footer {
 	.featured-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	.featured-project-title {
+		visibility: visible;
+	}
 }
 
 @media screen and (max-width: 58em) {
@@ -376,9 +379,6 @@ footer {
 	.cv--3col li > :nth-child(2),
 	.cv--3col li > :nth-child(3) {
 		grid-column: 2;
-	}
-	.featured-project-title {
-		visibility: visible;
 	}
 }
 
