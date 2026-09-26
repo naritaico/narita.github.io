@@ -7,16 +7,16 @@ additional-fields:
   - UBC SALA ARCH 521
   - "Professor: Joanne Gates"
 images:
-  - /assets/images/uploads/dining-table-coloured.png
-  - /assets/images/uploads/compressed-groundfloor-plan.jpg
-  - /assets/images/uploads/compressed-longitudinal-section.jpg
-  - /assets/images/uploads/compressed-planting-plan-darker.jpg
-  - /assets/images/uploads/hand-coloured.png
-  - /assets/images/uploads/kitchen-coloured.png
-  - /assets/images/uploads/exterior-coloured.png
-  - /assets/images/uploads/bathroom-coloured.png
-  - /assets/images/uploads/mezzanine-coloured.png
-  - /assets/images/uploads/file.png
+  - /assets/images/project-images/seed-to-table/image-01.webp
+  - /assets/images/project-images/seed-to-table/image-02.webp
+  - /assets/images/project-images/seed-to-table/image-03.webp
+  - /assets/images/project-images/seed-to-table/image-04.webp
+  - /assets/images/project-images/seed-to-table/image-05.webp
+  - /assets/images/project-images/seed-to-table/image-06.webp
+  - /assets/images/project-images/seed-to-table/image-07.webp
+  - /assets/images/project-images/seed-to-table/image-08.webp
+  - /assets/images/project-images/seed-to-table/image-09.webp
+  - /assets/images/project-images/seed-to-table/image-10.webp
 featured: true
 tags:
   - architecture
