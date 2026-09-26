@@ -63,7 +63,7 @@ html {
 }
 
 body {
-	background-color: white;
+	background-color: #fdfdfc;
 	display: flex;
 	flex-direction: column;
 	font-family: "Ronzino", "Helvetica", "Arial", sans-serif;
@@ -79,7 +79,7 @@ body {
 
 ::selection {
 	background: #ec5447;
-	color: white;
+	color: #fdfdfc;
 }
 
 /* TYPOGRAPHY+LINKS------------------------------------------------ */
@@ -131,7 +131,7 @@ header {
 	border-bottom: 2px solid #443731;
 	position: sticky;
 	top: 0;
-	background-color: white;
+	background-color: #fdfdfc;
 	z-index: 1;
 }
 

@@ -55,7 +55,7 @@ content:
         type: image
         list: true
         options:
-          rename: true
+          unique: true
 
       - name: featured
         label: "Feature on homepage?"
