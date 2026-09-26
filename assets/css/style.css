@@ -398,7 +398,7 @@ footer {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: white;
+		background-color: #fdfdfc;
 		padding-inline: 1rem;
 		z-index: 1;
 	}
