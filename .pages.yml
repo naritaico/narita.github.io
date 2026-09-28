@@ -76,9 +76,7 @@ content:
               label: "Art"
             - name: photography
               label: "Photography"
-            - name: publications
-              label: "Publications"
-            - name: speaking
-              label: "Speaking"
+            - name: published
+              label: "Published"
             - name: awarded
               label: "Awarded"
