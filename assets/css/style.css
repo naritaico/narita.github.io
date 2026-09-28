@@ -294,16 +294,33 @@ footer {
 .project-images {
 	& img {
 		display: block;
-		max-width: 100%;
 		height: auto;
 		margin-bottom: 1rem;
 	}
 }
 
 /* ABOUT_PAGE------------------------------------------------------ */
+.about-layout {
+	max-width: 104rem;
+	grid-template-columns: minmax(24rem, 33%) 1fr;
+	display: grid;
+	gap: 1rem;
+}
+
+.about-image {
+	& img {
+		display: block;
+		max-width: 100%;
+		max-height: auto;
+		margin: 0 0 1rem;
+	}
+}
+
 .about-text {
 	max-width: 44rem;
-	margin: 0 0 1rem;
+	& p {
+		margin: 0 0 1rem;
+	}
 }
 
 /* CV_PAGE--------------------------------------------------------- */
@@ -358,6 +375,10 @@ footer {
 	}
 	.featured-project-title {
 		visibility: visible;
+	}
+
+	.about-layout {
+		grid-template-columns: minmax(0, 38rem);
 	}
 }
 
