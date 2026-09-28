@@ -274,18 +274,17 @@ footer {
 
 .project-layout-default {
 	max-width: 104rem;
-	grid-template-columns: minmax(32rem, 33%) 1fr;
+	grid-template-columns: minmax(34rem, 40%) 1fr;
 	display: grid;
 	gap: 1rem;
 }
 
 .project-layout-text {
-	max-width: 44rem;
+	max-width: 100%;
 }
 
 .project-description {
-	margin: 3rem 0 1rem;
-
+	margin: 3rem 0 0;
 	& p {
 		margin: 0 0 0.6rem;
 	}
@@ -294,6 +293,7 @@ footer {
 .project-images {
 	& img {
 		display: block;
+		max-width: 100%;
 		height: auto;
 		margin-bottom: 1rem;
 	}
@@ -312,7 +312,7 @@ footer {
 		display: block;
 		max-width: 100%;
 		max-height: auto;
-		margin: 0 0 1rem;
+		margin: 0;
 	}
 }
 
