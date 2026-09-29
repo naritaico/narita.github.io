@@ -5,6 +5,7 @@ media:
 
 
 content:
+
   - name: projects
     label: Projects
     type: collection
@@ -18,6 +19,11 @@ content:
         sort: date
         order: desc
     fields:
+      - name: how-to
+        label: "How to use this form"
+        type: text
+        readonly: true
+        default: "1. Choose a layout. 2. Add a title and date. 3. Upload images."
       - name: layout
         label: "Choose layout"
         type: select
