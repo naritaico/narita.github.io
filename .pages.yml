@@ -19,11 +19,6 @@ content:
         sort: date
         order: desc
     fields:
-      - name: how-to
-        label: "How to use this form"
-        type: text
-        readonly: true
-        default: "1. Choose a layout. 2. Add a title and date. 3. Upload images."
       - name: layout
         label: "Choose layout"
         type: select
@@ -57,7 +52,7 @@ content:
         label: "Additional fields"
         type: string
         list: true
-        description: "Studio/firm/school/affiliation/organization, course, people, awards, etc."
+        description: "In this order: COLLABORATOR(S) (include label), AFFILIATION (no label, add multiples as a new line, SCHOOL+COURSE, (no label, but add a professor label underneath on new line), AWARD(S) (include label, add multiples on a new line), MEDIUM (no label), SIZE (no label)"
 
       - name: body
         label: "Description"
