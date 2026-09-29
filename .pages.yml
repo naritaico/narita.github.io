@@ -2,12 +2,21 @@ media:
   input: assets/images/uploads
   output: /assets/images/uploads
 
+
+
 content:
   - name: projects
     label: Projects
     type: collection
     filename: "{title}.md"
     path: _projects
+    view:
+      fields: [title, date, images, featured, tags]
+      primary: title
+      sort: [title, date, images, featured, tags]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: layout
         label: "Choose layout"
