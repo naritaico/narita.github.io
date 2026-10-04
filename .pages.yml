@@ -82,6 +82,8 @@ content:
               label: "Art"
             - name: photography
               label: "Photography"
+            - name: exhibitions
+              label: "Exhibitions"
             - name: published
               label: "Published"
             - name: awarded
