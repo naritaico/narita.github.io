@@ -44,15 +44,11 @@ content:
         required: true
         description: "Month & year only, just use first day of the month"
 
-      - name: location
-        label: "Location"
-        type: string
-
       - name: additional-fields
         label: "Additional fields"
         type: string
         list: true
-        description: "In this order: COLLABORATOR(S) (include label), AFFILIATION (no label, add multiples as a new line, SCHOOL+COURSE, (no label, but add a professor label underneath on new line), AWARD(S) (include label, add multiples on a new line), MEDIUM (no label), SIZE (no label)"
+        description: "In this order: COLLABORATOR(S) (include label), AFFILIATION (no label, add multiples as a new line, SCHOOL+COURSE, (no label, but add a professor label underneath on new line), LOCATION (no label), AWARD(S) (include label, add multiples on a new line), MEDIUM (no label), SIZE (no label)"
 
       - name: body
         label: "Description"
