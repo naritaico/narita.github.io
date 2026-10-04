@@ -4,13 +4,13 @@ title: For those who came before us
 date: 2024-09-01
 location: Winnipeg, MB
 images:
-  - /assets/images/uploads/15.jpg
-  - /assets/images/uploads/14.jpg
-  - /assets/images/uploads/8.jpg
-  - /assets/images/uploads/23.jpg
-  - /assets/images/uploads/24.jpg
-  - /assets/images/uploads/19.jpg
-  - /assets/images/uploads/20.jpg
+  - /assets/images/project-images/for-those-who-came-before-us/image-01.webp
+  - /assets/images/project-images/for-those-who-came-before-us/image-02.webp
+  - /assets/images/project-images/for-those-who-came-before-us/image-03.webp
+  - /assets/images/project-images/for-those-who-came-before-us/image-04.webp
+  - /assets/images/project-images/for-those-who-came-before-us/image-05.webp
+  - /assets/images/project-images/for-those-who-came-before-us/image-06.webp
+  - /assets/images/project-images/for-those-who-came-before-us/image-07.webp
 featured: true
 tags:
   - art
