@@ -2,9 +2,9 @@
 layout: project-default
 title: For those who came before us
 date: 2024-09-01
-location: Winnipeg, MB
 additional-fields:
   - Platform Centre for Photographic + Digital Art
+  - Winnipeg, MB
 images:
   - /assets/images/project-images/for-those-who-came-before-us/image-01.webp
   - /assets/images/project-images/for-those-who-came-before-us/image-02.webp
