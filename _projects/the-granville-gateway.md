@@ -3,18 +3,17 @@ layout: project-default
 title: The Granville Gateway
 date: 2021-01-01
 additional-fields:
-  - "Award: IOC IPC IAKS Bronze Medal Architecture & Design Award for Young
-    Professionals 2021"
+  - "Award: IOC IPC IAKS Bronze Medal Architecture & Design Award for Young Professionals 2021"
 images:
-  - /assets/images/uploads/roof for portfolio.png
-  - /assets/images/uploads/IAKS SITE PLAN (no labeling).png.png
-  - /assets/images/uploads/IAKS FLOORPLANS compressed.png
-  - /assets/images/uploads/overall perspective section reverse.png
-  - /assets/images/uploads/FINAL ATRIUM.png
-  - /assets/images/uploads/FINAL TENNIS CENTRE.png
-  - /assets/images/uploads/FITNESS FINAL.png
-  - /assets/images/uploads/MOVIE PARK bw.png
-  - /assets/images/uploads/RENDER GRANVILLE STREET.png
+  - /assets/images/project-images/the-granville-gateway/image-01.webp
+  - /assets/images/project-images/the-granville-gateway/image-02.webp
+  - /assets/images/project-images/the-granville-gateway/image-03.webp
+  - /assets/images/project-images/the-granville-gateway/image-04.webp
+  - /assets/images/project-images/the-granville-gateway/image-05.webp
+  - /assets/images/project-images/the-granville-gateway/image-06.webp
+  - /assets/images/project-images/the-granville-gateway/image-07.webp
+  - /assets/images/project-images/the-granville-gateway/image-08.webp
+  - /assets/images/project-images/the-granville-gateway/image-09.webp
 featured: true
 tags:
   - architecture
