@@ -2,8 +2,8 @@
 layout: project-default
 title: Passages of the Canals
 date: 2025-10-01
-location: Venice, Italy
 additional-fields:
+  - Venice, Italy
   - 13" x 15"
 images:
   - /assets/images/project-images/passages-of-the-canals/image-01.webp
