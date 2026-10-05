@@ -490,4 +490,8 @@ footer {
 	.cv li {
 		break-inside: avoid;
 	}
+
+	a {
+		text-decoration: none;
+	}
 }
