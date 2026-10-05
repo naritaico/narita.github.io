@@ -15,7 +15,7 @@ images:
   - /assets/images/project-images/saling-tubig/image-06.webp
   - /assets/images/project-images/saling-tubig/image-07.webp
   - /assets/images/project-images/saling-tubig/image-08.webp
-featured: false
+featured: true
 tags:
   - architecture
   - landscape-architecture
