@@ -7,14 +7,14 @@ additional-fields:
   - "Chair: Tania Gutiérrez-Monroy"
   - "Committee: Robyn Adams, Antoinette Baquiran, & Michelle Bullough"
 images:
-  - /assets/images/uploads/main cover.png
-  - /assets/images/uploads/cover.png
-  - /assets/images/uploads/saling-tubig_story_Page_04.jpg
-  - /assets/images/uploads/saling-tubig_story_Page_09.jpg
-  - /assets/images/uploads/saling-tubig_story_Page_20.jpg
-  - /assets/images/uploads/saling-tubig_story_Page_30.jpg
-  - /assets/images/uploads/saling-tubig_story_Page_47.jpg
-  - /assets/images/uploads/saling-tubig_story_Page_50.jpg
+  - /assets/images/project-images/saling-tubig/image-01.webp
+  - /assets/images/project-images/saling-tubig/image-02.webp
+  - /assets/images/project-images/saling-tubig/image-03.webp
+  - /assets/images/project-images/saling-tubig/image-04.webp
+  - /assets/images/project-images/saling-tubig/image-05.webp
+  - /assets/images/project-images/saling-tubig/image-06.webp
+  - /assets/images/project-images/saling-tubig/image-07.webp
+  - /assets/images/project-images/saling-tubig/image-08.webp
 featured: false
 tags:
   - architecture
