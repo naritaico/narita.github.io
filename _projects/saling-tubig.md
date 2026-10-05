@@ -5,7 +5,7 @@ date: 2025-05-01
 additional-fields:
   - UBC SALA Master's Thesis
   - "Chair: Tania Gutiérrez-Monroy"
-  - "Committee: Robyn Adams, Antoinette Baquiran, & Michelle Bullough"
+  - "Committee: Robyn Adams, Antoinette Baquiran & Michelle Bullough"
 images:
   - /assets/images/project-images/saling-tubig/image-01.webp
   - /assets/images/project-images/saling-tubig/image-02.webp
