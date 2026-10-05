@@ -5,6 +5,7 @@ date: 2023-12-01
 additional-fields:
   - "Collaborators: Angelica Ragandac-Ladrera & Hoi Ying Ng "
   - UBC SALA LARC 504
+  - "Professors: Christen Oakes & Noora Hijra"
 images:
   - /assets/images/project-images/beneath-the-depths-deaths/image-01.webp
   - /assets/images/project-images/beneath-the-depths-deaths/image-02.webp
